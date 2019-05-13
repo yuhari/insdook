@@ -1,0 +1,70 @@
+<html>
+{{ "<!-- Header -->" | safeHTML }}
+    {{ partial "header.html" . }}
+
+    <body>
+		
+	    {{ "<!-- Wrapper -->" | safeHTML }}
+	        <div id="wrapper">
+
+	        	{{ partial "nav.html" . }}
+				
+				{{ if .Data.Terms }}
+					<section id="taxonomy" class="style2" style="height:80%">
+							<div class="inner">
+					        <header class="major">
+					            <h1>全部标签</h1>
+				        </header>
+							<div class="content">
+								<div class="tags">
+								{{ range .Data.Terms.ByCount }}
+									<span><a class="icon fa-tag" href="/tags/{{ .Page.Title | lower }}"> {{ .Page.Title }}({{ .Count }})</a></span>
+								{{ end }}
+						</div>
+						</div>
+						</div>
+					</section>
+				{{ else }}
+					{{ "<!-- Main -->" | safeHTML }}
+					<div id="main">
+						{{ .Render "_banner" }}
+					
+						{{ $v := .Site.Params.paginate }}
+						{{ if isset .Params "paginate" }}
+							{{ $v = .Params.paginate }}
+						{{ end }}
+						{{ $paginator := .Paginate ((.Pages.ByDate.Reverse).ByParam "weight").Reverse $v }}
+				        <section id="two" class="spotlights">
+				            {{ range $paginator.Pages }}
+				              {{ .Render "_bloglist" }}
+				            {{ end }}
+				        </section>
+						
+						{{ $totalpage := $paginator.TotalPages }}
+						{{ if gt $totalpage 1 }}
+						{{ "<!-- pagination -->" | safeHTML }}
+						<section>
+							<ul class="pagination" style="float:right;margin:0 3em 4em 0">
+								<li><span class="button small {{ if not $paginator.HasPrev }} disabled {{ end }}"><a class="pagelink" href="{{ if $paginator.HasPrev }}{{ $paginator.Prev.URL }}{{ end }}">前页</a></span></li>
+								{{ $pg := $paginator.PageNumber }}
+						
+								{{ range $paginator.Pagers }}
+									<li><a class="page {{ if eq .PageNumber $pg }}active{{ end }}" href="{{ .URL }}" >{{ .PageNumber }}</a></li>
+								{{ end }}
+						
+								<li><span class="button small {{ if not $paginator.HasNext }} disabled {{ end }}"><a class="pagelink" href="{{ if $paginator.HasNext }}{{ $paginator.Next.URL }}{{ end }}">后页</a></span></li>
+							</ul>
+						</section>	
+						{{ end }}
+					</div>
+				{{ end }}
+				
+			</div>
+
+       
+		
+    {{ "<!-- Scripts -->" | safeHTML}}
+        {{ partial "js.html" . }}
+        
+    </body>
+</html>

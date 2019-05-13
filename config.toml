@@ -1,3 +1,207 @@
-baseURL = "http://example.org/"
+baseURL = "http://localhost:1313"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "INS Do OK--现在做，还不晚"
+theme = "insdook"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+# Enter your disqus shortname to enable comments
+disqusShortname = "insdook_yuhari"
+
+paginate = 1
+paginatePath = "pg"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+
+  MainTheme = ""
+	
+  paginate = 4
+
+  # Provide your metadata here.
+  name = "Your name"
+  description = "Your description"
+
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
+
+  # Just a custom image variable, please define it in .md files for content.
+  image = ""
+
+  # 404 error customization
+  [params.error404]
+    heading = "这儿什么都没有呀!"
+    text = "点[**这儿**](/)回去，快回去！ "
+
+  # Navigation Section
+  [params.navigation]
+    title = "INSDOOK"
+    subtitle = "现在做，还不晚"
+	# menu mode can be `common` optionally
+	menumode_common = true
+    # Optional logo as brand stored in img/
+    # logo = "logo.png"
+	
+    [[params.navigation.links]]
+      name = "Home"
+      url = ""
+
+    [[params.navigation.links]]
+      name = "Blogs"
+      url = "blogs"
+
+#    [[params.navigation.links]]
+#      name = "Galleries"
+#      url = "galleries"
+
+#    [[params.navigation.links]]
+#      name = "Vlogs"
+#      url = "vlogs"
+	  
+    [[params.navigation.links]]
+      name = "Tags"
+      url = "tags"
+
+    [[params.navigation.links]]
+      name = "About"
+      url = "about"
+
+  # Banner section
+  [params.banner]
+    # To change the background image on the homepage banner, replace 'banner.jpg' in
+    # the 'static/img' folder.
+    title = "Here we are."
+    subtitle = "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP\nAND RELEASED UNDER THE CREATIVE COMMONS."
+    buttonText = "Get Started"
+
+
+  # Tiles Section
+  [params.tiles]
+    enable = true
+    # Display your showcases here.
+    
+    [[params.tiles.showcase]]
+      title = "Blogs"
+      subtitle = "博客、随笔、感悟"
+      image = "pic01.jpg"
+      url = "blogs"
+
+#    [[params.tiles.showcase]]
+#      title = "Galleries"
+#      subtitle = "照片、图集、涂鸦"
+#      image = "pic02.jpg"
+#      url = "galleries"
+
+#    [[params.tiles.showcase]]
+#      title = "Vlogs"
+#      subtitle = "短视频、影像记录"
+#      image = "pic03.jpg"
+#      url = "vlogs"
+
+    [[params.tiles.showcase]]
+      title = "Tags"
+      subtitle = "全部标签"
+      image = "pic04.jpg"
+      url = "tags"
+
+    # You can make more showcases by copy and pasting the code above
+
+  [params.blog]
+    # All blogs defined in their own files. You can find example blogs
+    # at 'exampleSite/content/blogs'. Copy the 'blogs' folder into the 'content' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    # To add more blogs just copy and paste the code.
+
+  # Section Type Two
+  [params.two]
+    enable = false
+    title = "Massa libero"
+    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
+    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
+    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
+    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
+    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+    buttonText = "Get Started"
+    url = "blogs"
+
+  [params.ownercard]
+  	enable = true
+	avatar = "img/pic04.jpg"
+	avatarname = "YUHARI"
+    title = "关于  Yuhari"
+    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
+    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
+    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
+    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
+    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+    buttonText = "了解更多 ..."
+    url = "about/who"
+	
+  [[params.social]]
+    icon = "fa-envelope"
+    url = "mailto:yuhari@insdook.com" 
+    label = "Email"
+	
+  [[params.social]]
+    icon = "fa-github"
+    url= "https://www.github.com/yuhari"
+    label = "GitHub"
+  
+  # Uses font awesome icons
+  [[params.social]]
+    icon = "fa-weibo"
+    url= "https://weibo.com/5487775745/profile"
+    label = "Sina Weibo"
+
+  [[params.social]]
+    icon = "fa-twitter"
+    url= "https://twitter.com/yuhari0427"
+    label = "Twitter"
+
+  [[params.social]]
+    icon = "fa-qq"
+    url= "https://user.qzone.qq.com/3152510170"
+    label = "Tencent QQ"
+
+  # Contact section
+  [params.contact]
+    enable = false
+	
+	enableform = false
+    buttonSend = "Send Message"
+    buttonClear = "Clear"
+	formEmail = "yuhari@insdook.com"
+
+    [[params.contact.email]]
+    title = "Email"
+    email = "yuhari@insdook.com"
+
+    [[params.contact.phone]]
+    title = "Phone"
+    phone = "(000) 000-0000 x1234"
+
+    [[params.contact.address]]
+    title = "Address"
+    street = "Street"
+    city = "City, ST 00000"
+    country = "Country"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "2019 insdook"
+
+    [[params.footer.quicklinks]]
+      url= "https://www.html5up.net"
+      alt = "Hugo-forty"
+	  
+    [[params.footer.quicklinks]]
+#      text = "Design: "
+      url= "https://www.html5up.net"
+      alt = "HTML5 UP"

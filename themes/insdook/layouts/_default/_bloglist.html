@@ -1,0 +1,28 @@
+
+    <section class="listcard" style="margin:1.5em">
+		        <div class="content">
+		            <div class="inner">
+		   
+			<div class="left-text">
+				                <header class="major">
+                               <h3>{{ .Title }}</h3>
+                           </header>
+                           <p>{{ .Description }}</p>
+			{{ if .Params.tags }}
+				<div class="tags">
+				<label>创作于:</label>&nbsp;{{ dateFormat "2006/01/02 15:04" .Params.Date }}
+				&nbsp;&nbsp;
+				<label>Tags:</label>
+				{{ range .Params.tags }}
+				<span><a class="icon fa-tag" href="/tags/{{ . | lower }}"> {{ . }}</a></span>
+				{{ end }}
+				</div>
+			{{ end }}
+			</div>
+	                       <ul class="actions">
+	                           <li><a href="{{ .Permalink }}" class="button">去看看 >></a></li>									
+	                       </ul>
+                       </div>
+                      
+                   </div>
+               </section>

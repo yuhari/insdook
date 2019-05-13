@@ -1,0 +1,23 @@
+{{ "<!-- OwnerCard -->" | safeHTML}}
+    <section id="ownercard">
+		{{ if .Site.Params.Ownercard.avatar }}
+		  <div class="avatar">
+		  	<img  src="{{ .Site.Params.Ownercard.avatar | absURL}}">
+			<p>{{ .Site.Params.Ownercard.avatarname }}</p>
+            <ul class="icons">
+                {{ range .Site.Params.social }}
+                    <li><a href="{{ .url | safeHTML }}" class="icon {{ .icon }}" target="_blank"><span class="label">{{ .label }}</span></a></li>
+                {{ end }}
+            </ul>
+	  	  </div>
+		{{ end }}
+        <div class="inner {{ if .Site.Params.Ownercard.avatar }} short {{ end }}">
+            <header class="major">
+                <h2>{{ .Site.Params.Ownercard.title}}</h2>
+            </header>
+            <p>{{ .Site.Params.Ownercard.subtitle }}</p>
+            <ul class="actions">
+                <li><a href="{{ .Site.Params.Ownercard.url | absURL}}" class="button next">{{ .Site.Params.Ownercard.buttonText }}</a></li>
+            </ul>
+        </div>
+    </section>
