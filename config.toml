@@ -7,7 +7,7 @@ theme = "insdook"
 googleAnalytics = ""
 
 # Enter your disqus shortname to enable comments
-disqusShortname = "insdook_yuhari"
+disqusShortname = "disqus_mlKfWzs3I9"
 
 paginate = 1
 paginatePath = "pg"
