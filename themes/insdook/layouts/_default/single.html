@@ -18,10 +18,12 @@
                             <header class="major">
                                 <h1>{{ .Title}}</h1>
                             </header>
-							{{ if .Parent.Params.taxonomy }}
-							123
-								{{ print .Params.slug }}
-							{{ end }}
+							<p style="font-size:0.8em">
+								本文共计 {{ len .Content }} 字
+								{{ if .Params.Minute }}
+									，阅读完大约需要 {{ .Params.Minute }} 分钟
+								{{ end }} 
+							</p>
                             {{ if .Params.image }}
                                 <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" /></span>
                             {{ end }}

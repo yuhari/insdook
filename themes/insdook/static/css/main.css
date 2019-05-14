@@ -4042,6 +4042,7 @@
 			visibility: visible;
 		}
 		#ownercard .inner.short {
+			min-height:24em;
 			margin-right:4em;
 			width:calc(100% - 30em);
 		}

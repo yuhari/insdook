@@ -1,5 +1,5 @@
 baseURL = "http://localhost:1313"
-languageCode = "en-us"
+languageCode = "zh-CN"
 title = "INS Do OK--现在做，还不晚"
 theme = "insdook"
 
@@ -75,7 +75,7 @@ paginatePath = "pg"
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Here we are."
+    title = "小喷菇"
     subtitle = "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP\nAND RELEASED UNDER THE CREATIVE COMMONS."
     buttonText = "Get Started"
 
@@ -135,11 +135,8 @@ paginatePath = "pg"
 	avatar = "img/pic04.jpg"
 	avatarname = "YUHARI"
     title = "关于  Yuhari"
-    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
-    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
-    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
-    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+    subtitle = """您好呀，小喷菇.你好呀，小喷菇，小呀小喷菇，你好您好小喷菇。
+	您好呀，小喷菇.你好呀，"""
     buttonText = "了解更多 ..."
     url = "about/who"
 	
@@ -195,13 +192,13 @@ paginatePath = "pg"
   # Footer section
   [params.footer]
     enable = true
-    copyright = "2019 insdook"
+    copyright = "2019 INSDOOK"
 
     [[params.footer.quicklinks]]
-      url= "https://www.html5up.net"
-      alt = "Hugo-forty"
+      url= "https://github.com/MarcusVirg/forty"
+      alt = "HUGO-FORTY"
 	  
     [[params.footer.quicklinks]]
 #      text = "Design: "
-      url= "https://www.html5up.net"
-      alt = "HTML5 UP"
+      url= "https://disqus.com"
+      alt = "DISQUS"
