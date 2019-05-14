@@ -1,6 +1,20 @@
 {{ "<!-- Banner -->" | safeHTML}}
     <section id="banner" class="major">
         <div class="inner">
+			{{ if eq .Site.Params.Banner.mode "list" }}
+			<header class="major">
+				<h4>{{ .Site.Params.Banner.title }}</h4>
+			</header>
+			<div class="content">
+				<ul style="list-style:none">
+				{{ range first 6 ( sort .Pages ".Params.Date" "desc" ) }}
+				<li>
+					<span><a href="{{ .Permalink }}">{{ dateFormat "2006/01/02" .Date }}&nbsp;&nbsp;&nbsp;&nbsp;{{ .Title }}</a></span>
+				</li>
+				{{ end }}
+				</ul>
+			</div>
+			{{ else }}
             <header class="major">
                 <h1>{{ .Site.Params.Banner.title }}</h1>
             </header>
@@ -10,5 +24,7 @@
                     <li><a href="#one" class="button next scrolly">{{ .Site.Params.Banner.buttonText }}</a></li>
                 </ul>
             </div>
+			{{ end }}
+       
         </div>
     </section>
