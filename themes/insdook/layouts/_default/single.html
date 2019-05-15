@@ -18,7 +18,17 @@
                             <header class="major">
                                 <h1>{{ .Title}}</h1>
                             </header>
-							<p style="font-size:0.8em">
+							<div class="tags">
+								<label>创作于:</label>&nbsp;{{ dateFormat "2006/01/02 15:04" .Params.Date }}
+								&nbsp;&nbsp;
+								{{ if .Params.tags }}
+								<label>Tags:</label>
+								{{ range .Params.tags }}
+								<span><a class="icon fa-tag" href="/tags/{{ . | lower }}"> {{ . }}</a></span>
+								{{ end }}
+								{{ end }}
+							</div>
+							<p class="box" style="font-size:0.8em;background:#333856">
 								本文共计 {{ len .Content }} 字
 								{{ if .Params.Minute }}
 									，阅读完大约需要 {{ .Params.Minute }} 分钟
@@ -30,6 +40,22 @@
 							<div class="box" style="background:#333856">
                             {{ .Content }}
 							</div>
+							
+							{{ if .Params.related }}
+							<div class="box" style="background:#333856">
+								<div style="font-weight:bold;margin-bottom:1em">相关阅读</div>
+								<ul>
+									{{ $site := .Site }}
+									{{ range $k,$v := .Params.related }}
+									<li>
+									{{ with $site.GetPage $v }}
+										<a href="{{ .Permalink }}">{{ .Title }}</a>
+									{{ end }}
+									</li>
+									{{ end }}
+								</ul>
+							</div>
+							{{ end }}
                         </div>
                     </section>
             {{ "<!-- Disqus Inject -->" | safeHTML }}

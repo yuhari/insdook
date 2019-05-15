@@ -1,5 +1,5 @@
 ---
-title : "为什么要建这个网站？"
+title : "我突然想建一个个人网站了"
 description: "lalala"
 slug: "why"
 tags: ["about"]

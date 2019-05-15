@@ -7,7 +7,7 @@
 			</header>
 			<div class="content">
 				<ul style="list-style:none">
-				{{ range first 6 ( sort .Pages ".Params.Date" "desc" ) }}
+				{{ range first 6 ( sort .Pages ".Params.date" "desc" ) }}
 				<li>
 					<span><a href="{{ .Permalink }}">{{ dateFormat "2006/01/02" .Date }}&nbsp;&nbsp;&nbsp;&nbsp;{{ .Title }}</a></span>
 				</li>
