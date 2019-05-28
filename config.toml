@@ -133,11 +133,10 @@ paginatePath = "pg"
 
   [params.ownercard]
   	enable = true
-	avatar = "img/pic04.jpg"
+	avatar = "img/avatar.gif"
 	avatarname = "YUHARI"
-    title = "关于  Yuhari"
-    subtitle = """您好呀，小喷菇.你好呀，小喷菇，小呀小喷菇，你好您好小喷菇。
-	您好呀，小喷菇.你好呀，"""
+    title = "有些想说的"
+    subtitle = """我是Yuhari，一个程序员，很高兴你能来到我的个人站点，也许以后我们会经常在这里共同产生一些不同体验。如果对该站点上的内容或者对我有什么想法，欢迎留言或邮件。"""
     buttonText = "了解更多 ..."
     url = "about/who"
 	
@@ -162,11 +161,7 @@ paginatePath = "pg"
     url= "https://twitter.com/yuhari0427"
     label = "Twitter"
 
-  [[params.social]]
-    icon = "fa-qq"
-    url= "https://user.qzone.qq.com/3152510170"
-    label = "Tencent QQ"
-
+ 
   # Contact section
   [params.contact]
     enable = false
