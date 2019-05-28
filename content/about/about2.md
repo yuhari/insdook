@@ -4,7 +4,7 @@ description: "我觉得有必要说下这个个人网站是如何建立的，以
 slug: "how"
 tags: ["about"]
 minute: 6
-date: 2019-01-12T23:15:09-07:00
+date: 2019-05-12T23:15:09-07:00
 related: ["/about/about1", "/about/about3"]
 
 ---
